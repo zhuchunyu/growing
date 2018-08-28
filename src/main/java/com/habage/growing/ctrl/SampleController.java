@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /**
  * @author yuz
  */
@@ -23,7 +25,11 @@ public class SampleController {
 
         System.out.println(cityMapper.getAll());
 
-        cityMapper.selectAll();
+        List<City> cities = cityMapper.selectAll();
+        System.out.println(cities);
+
+        City city = cityMapper.selectByPrimaryKey("1");
+        System.out.println(city);
 
         return "HelloWorld!";
     }
