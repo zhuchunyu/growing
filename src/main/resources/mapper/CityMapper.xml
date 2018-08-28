@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.habage.growing.mapper.CityMapper">
+    <resultMap id="cityResultMap" type="com.habage.growing.entity.City">
+        <result column="id" property="id" jdbcType="VARCHAR" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="state" property="state" jdbcType="VARCHAR" />
+    </resultMap>
+    <select id="getAll" resultType="com.habage.growing.entity.City" resultMap="cityResultMap">
+        select * from city
+    </select>
+</mapper>
