@@ -1,5 +1,6 @@
 package com.habage.growing.mapper;
 
+import com.github.pagehelper.Page;
 import com.habage.growing.entity.City;
 import com.habage.growing.util.MyMapper;
 
@@ -17,4 +18,10 @@ public interface CityMapper extends MyMapper<City> {
      * @return
      */
     List<City> getAll();
+
+    /**
+     * 分页查询
+     * @return
+     */
+    Page<City> getPage();
 }

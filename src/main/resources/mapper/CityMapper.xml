@@ -9,4 +9,7 @@
     <select id="getAll" resultType="com.habage.growing.entity.City" resultMap="cityResultMap">
         select * from city
     </select>
+    <select id="getPage" resultType="com.habage.growing.entity.City" resultMap="cityResultMap">
+        select * from city
+    </select>
 </mapper>

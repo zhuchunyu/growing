@@ -1,6 +1,8 @@
 package com.habage.growing.ctrl;
 
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.habage.growing.entity.City;
 import com.habage.growing.mapper.CityMapper;
 
@@ -30,6 +32,10 @@ public class SampleController {
 
         City city = cityMapper.selectByPrimaryKey("1");
         System.out.println(city);
+
+        PageHelper.startPage(1, 3);
+        Page<City> page = cityMapper.getPage();
+        System.out.println(page);
 
         return "HelloWorld!";
     }
